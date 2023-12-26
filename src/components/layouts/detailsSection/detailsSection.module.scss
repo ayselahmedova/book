@@ -1,0 +1,57 @@
+
+.detail_section_container{
+    padding-top: 8rem;
+    padding-bottom: 8rem ;
+    padding-inline: 5%;
+}
+
+.flex_container{
+    display: flex;
+    justify-content: space-between;
+}
+.book_img_container, .book_details_container{
+    width: 50%;
+}
+.book_img_container{
+    text-align: center;
+}
+.book_img_container img{
+    height: 400px;
+    width: auto;
+    border: 1px solid #ddd;
+}
+
+.book_details_container{
+    font-family: 'Hanken Grotesk', sans-serif;
+    h2{
+        font-size: 32px;
+    }
+    p{
+        padding: 1rem 0;
+    }
+    .book_description_container{
+        line-height: 1.7rem;
+    }
+    h3{
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        color: rgb(209, 120, 56);
+    }
+}
+
+.cart_button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color:green;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.3s;
+    border:none;
+    
+}
+.cart_button:hover{
+    background-color:black
+}

@@ -1,0 +1,15 @@
+.product_listing_all_container{
+    padding-top: 128px;
+    padding-bottom: 80px;
+    padding-inline: 5%;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:5rem;
+}
+
+.grid_item{
+    display: flex;
+    justify-content: center;
+}
