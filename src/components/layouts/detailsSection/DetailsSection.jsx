@@ -49,5 +49,4 @@ const DetailsSection = () => {
     </section>
   )
 }
-
 export default DetailsSection

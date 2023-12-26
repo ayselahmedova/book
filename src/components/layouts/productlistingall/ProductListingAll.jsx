@@ -9,10 +9,10 @@ const ProductListingAll = () => {
     <section className={productlistingall.product_listing_all_container}>
         <div className={productlistingall.container}>
             <div className={productlistingall.grid_container}>
-                    {BookData.map((book) => {
+                    {BookData.slice(0,4).map((book) => {
                         return (
                             <div key={book.id} className={productlistingall.grid_item}>
-                                <ProductListingCard bookData={book} />
+                                <ProductListingCard key={book.id} bookData={book} />
                             </div>
                         )
                     })}

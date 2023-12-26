@@ -55,3 +55,10 @@
 .cart_button:hover{
     background-color:black
 }
+@media only screen and (max-width: 600px) {
+.flex_container{
+    flex-direction: column;
+    padding:auto;
+}
+}
+
