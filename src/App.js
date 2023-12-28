@@ -7,10 +7,13 @@ import SearchPage from './pages/SearchPage/SearchPage';
 import Login from './pages/LoginPage/Login';
 import SignUp from './pages/SignUpPage/SignUp';
 import app from './firebase/firebase.js';
-import Cartt from './assets/Cartt.jsx'
+import CartPage from './pages/CartPage/CartPage.jsx';
+
+// import CardPage from './pages/cartPage/CardPage'
 import {getAuth, onAuthStateChanged} from 'firebase/auth';
 export const UserContext = createContext({});
-export const CartContext = createContext([]);
+export const CartContext = createContext({ cartItems: [], setCartItems: () => {} , setCartItemEmpty: () => {} });
+
 
 const App = () =>  {
 
@@ -18,10 +21,18 @@ const App = () =>  {
     const [authendicatedUser, setAuthendicatedUser] = useState(null)
     const [cartItems, setCartItems] = useState([]);
     
+
+    const setCartItemEmpty = () => {
+        setCartItems([])
+    };
+
     useEffect(() =>{
         onAuthStateChanged(auth, (user)=>{
+     
+          
             if (user){
-                console.log(user)
+               
+          
                 setAuthendicatedUser(user);
             }
             else{
@@ -30,21 +41,25 @@ const App = () =>  {
         })
     })
 
+    
     useEffect(() =>{
         console.log(cartItems)
     },[cartItems])
 
+
     return (
         <UserContext.Provider value ={authendicatedUser}>
-            <CartContext.Provider value ={cartItems}>
+      <CartContext.Provider value={{ cartItems, setCartItems,setCartItemEmpty }}>
+    
                 <Routes>
                     <Route path= "/" element={<HomePage/>}/>
                     <Route path= "/books" element={<BooksPage/>}/>
+                    {/* <Route path= "/card" element={<CardPage/>}/> */}
                     <Route path= "/search" element={<SearchPage/>}/>
                     <Route path= "/book-details/:id" element={<BookDetailsPage/>}/>
                     <Route path= "/login" element={<Login/>}/>
                     <Route path= "/signup" element={<SignUp/>}/>
-                    <Route path= "/basket" element={<Cartt/>}/>
+                    <Route path= "/basket" element={<CartPage/>}/>
 
                 </Routes>
             

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 // import ProductImage from '../../../assets/bookImages/Sherlock-Holmes.jpg'
 
 const ProductListingCard = ({bookData}) => {
-  console.log(bookData)
+//   console.log(bookData)
   return (
     <div className={productListingCard.product_listing_card}>
                     <div className={productListingCard.product_listing_img_container}>
@@ -13,9 +13,9 @@ const ProductListingCard = ({bookData}) => {
                     <div className={productListingCard.product_listing_details_container}>
                         <h3>{bookData.book_name}</h3>
                         <h2>{bookData.author_name}</h2>
-                        <p>$ 3{bookData.price}</p>
+                        <p>$ {bookData.price}</p>
                         <div className={productListingCard.cart_btn_container}>
-                            <Link to={`/book-details/${bookData.id}`} className={productListingCard.product_listing_button}>Button</Link>
+                            <Link to={`/book-details/${bookData.id}`} className={productListingCard.product_listing_button}>Show</Link>
                         </div>
                         
                     </div>

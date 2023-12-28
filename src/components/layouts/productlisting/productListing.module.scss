@@ -6,7 +6,7 @@
     padding-top: 64px;
     display: flex;
     flex-wrap: wrap;
-    gap:2rem;
+    gap:1rem;
     justify-content: space-between;
 }
 .product_listing_img_container{
@@ -55,3 +55,11 @@
 .product_listing_button:hover{
     background-color:black;
 }
+@media only screen and (max-width: 600px) {
+    .listing_container{
+        gap:1rem;
+    }
+    .product_listing_img_container{
+        width: 150px;
+    }    
+  }

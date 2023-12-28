@@ -9,7 +9,7 @@ const DetailsSection = () => {
     const [bookData,setbookData] = useState({});
 
     const user = useContext(UserContext);
-    const [cartItems,setCartItems] = useContext(CartContext);
+    const {cartItems,setCartItems} = useContext(CartContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -19,7 +19,16 @@ const DetailsSection = () => {
 
     const handleAddToCard = () => {
         if(user){
-            setCartItems([...cartItems,bookData])}
+            if (Array.isArray(cartItems)) {
+                if(!cartItems.includes(bookData)){
+                    setCartItems([...cartItems, bookData]);
+                }
+            } else {
+                console.log(bookData);
+                console.log(cartItems)
+                setCartItems(bookData);
+            }
+        }
         else{
             navigate ('/login');
             alert("Please Login")
@@ -42,7 +51,7 @@ const DetailsSection = () => {
                     <p><b>Book Length</b>: {bookData.print_length}</p>
                     <h3><b>Price</b>: ${bookData.price}</h3>
 
-                    <a onClick = {handleAddToCard} className={detailsSection.cart_button}>Add to Cart</a>
+                    <button onClick = {handleAddToCard} className={detailsSection.cart_button}>Add to Cart</button>
                 </div>
             </div>
         </div>

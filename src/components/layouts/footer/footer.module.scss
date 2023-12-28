@@ -52,3 +52,30 @@
     font-weight: 500;
     background-color:rgb(209, 120, 56);
 }
+
+@media only screen and (max-width: 600px) {
+
+    .footer_container{
+        form{
+            width: 100%;
+            padding-top: 48px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+    
+  }
+@media only screen and (max-width: 300px) {
+
+    .footer_container{
+        form{
+            width: 100%;
+            padding-top: 48px;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+    
+  }

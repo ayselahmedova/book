@@ -4,7 +4,7 @@ import './searchresultcard.styles.css';
 
 const SearchResultCard = ({ bookData }) => {
     return (
-        <section className="cart-item">
+        <section className="cart-item-main">
             <div className="cart-item-img-container">
                 <img src={bookData.book_url} alt="cart-item-img" className="cart-item-img" />
             </div>

@@ -40,4 +40,24 @@
 
 @media only screen and (max-width: 600px) {
 .search_input{
-    width: 50px}}
+    width: 50px}
+}
+
+@media only screen and (max-width: 300px) {
+    .search_input{
+        width: 40px;
+        font-size: 12px;
+        padding-left: 4px;
+    }
+
+    .search_button{
+        padding: 2px 4px;
+        border: none;
+        background-color:rgb(209, 120, 56);
+        color: black;
+        border-radius: 4%;
+        cursor: pointer;
+        transition: 1s;
+        font-size: 8px;
+    }
+}

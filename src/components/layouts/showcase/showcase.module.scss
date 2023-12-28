@@ -30,3 +30,47 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .showcase_container{
+        height: 320px;
+    }
+    .overlay{
+        height: 320px;
+    }
+    .showcase_content{
+        padding-top: 62px;
+        h1{
+            font-size: 24px;
+            padding-bottom: 5px;
+            span{
+                font-weight: 600;
+            }
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+  }
+
+@media only screen and (max-width: 300px) {
+    .showcase_container{
+        height: 320px;
+    }
+    .overlay{
+        height: 320px;
+    }
+    .showcase_content{
+        padding-top: 62px;
+        h1{
+            font-size: 24px;
+            padding-bottom: 5px;
+            span{
+                font-weight: 600;
+            }
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
